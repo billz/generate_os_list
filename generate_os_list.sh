@@ -21,7 +21,7 @@ DESCRIPTION="The easiest, full-featured wireless router for Debian-based devices
 REPO="RaspAP/raspap-webgui"
 
 # Fetch latest release from GitHub (adapted from RaspAP installer)
-fetch_latest_release() {
+_get_release() {
     local response
     local host="api.github.com"
 
@@ -47,7 +47,7 @@ fetch_latest_release() {
 }
 
 # Fetch latest release info
-fetch_latest_release
+_get_release
 
 BASE_URL="https://github.com/RaspAP/raspap-webgui/releases/download/${VERSION}"
 
@@ -112,7 +112,7 @@ ARM64_DOWNLOAD_SIZE=$(_get_size "$ARM64_ZIP")
 ARM64_DOWNLOAD_SHA=$(_get_sha256 "$ARM64_ZIP")
 
 # Generate JSON
-cat > os-sublist-raspap.json << EOF
+cat > os-sublist-sublist.json << EOF
 {
   "name": "${NAME}",
   "description": "${DESCRIPTION}",
