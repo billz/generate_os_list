@@ -1,6 +1,16 @@
 # generate_os_list
 
-## Example usage and output
+The script resolves the latest RaspAP release version and date, extracts the images and uses `shasum()` to compute SHA values.
+The resulting output is written to a JSON file in a format expected by the [RPi Imager](https://github.com/raspberrypi/rpi-imager).
+
+## Usage
+
+1. Clone this repository: `git clone https://github.com/billz/generate_os_list.git`
+2. Enter the working directory: `cd generate_os_list`
+3. Download the arm64 and armhf compressed archives from the [latest releases](https://github.com/RaspAP/raspap-webgui/releases/latest)
+4. Execute the script with `./generate_os_list.sh` or `bash ./generate_os_list.sh`
+
+## Example output
 
 ```
  ./generate_os_list.sh
