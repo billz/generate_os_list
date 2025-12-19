@@ -1,6 +1,6 @@
 # generate_os_list
 
-The script resolves the latest RaspAP release version and date, extracts the images and uses `shasum()` to compute SHA values.
+The script resolves the latest RaspAP release version and date, extracts the OS images and uses `shasum()` to compute SHA values for the files.
 The resulting output is written to a JSON file in a format expected by the [RPi Imager](https://github.com/raspberrypi/rpi-imager).
 
 ## Usage
